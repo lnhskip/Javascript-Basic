@@ -2,25 +2,25 @@
 
 ## Một số hàm built-in(Là những hàm được xây dựng sẵn)
 1. Alert
-  -  Show ra cảnh báo trên trình duyệt
-  Vd: alert("Hello world!!!")
+    -  Show ra cảnh báo trên trình duyệt
+    - Vd: alert("Hello world!!!")
 2. Console
-  - Là đối tượng gồm các phương thức để giao tiếp với trình console của browser
-  Vd: console.log("Nguyen Duy Linh")
+    - Là đối tượng gồm các phương thức để giao tiếp với trình console của browser
+    - Vd: console.log("Nguyen Duy Linh")
 3. Confirm
-  - Show ra hộp thoại để xác nhận, với message là giá trị truyền vào
-  Vd: confirm("Bạn chắc chắn muốn học javascript chứ?")
+    - Show ra hộp thoại để xác nhận, với message là giá trị truyền vào
+    - Vd: confirm("Bạn chắc chắn muốn học javascript chứ?")
 4. Prompt
-  - Show ra hộp thoại có thể nhập giá trị trên đó, với message là giá trị truyền vào
-  Vd: prompt("Nhập số tuổi")
+    - Show ra hộp thoại có thể nhập giá trị trên đó, với message là giá trị truyền vào
+    - Vd: prompt("Nhập số tuổi")
 5. Set timeout
-  - Set thời gian sau bao lâu để xử lý một công việc, với tham số truyền vào là milisecond 
-  Vd: setTimeout( function () {
+    - Set thời gian sau bao lâu để xử lý một công việc, với tham số truyền vào là milisecond 
+    - Vd: setTimeout( function () {
           console.log("Đây là message được show ra sau 1s")
       }, 1000 )
 6. Set interval
-  - Thực hiện một công việc lặp đi lặp lại sau một khoảng thời gian, với tham số truyền vào là milisecond
-  Vd: setInterval( function () {
+    - Thực hiện một công việc lặp đi lặp lại sau một khoảng thời gian, với tham số truyền vào là milisecond
+    - Vd: setInterval( function () {
           console.log("In ra sau 1s" + Math.random())
       }, 1000 )
 
@@ -61,15 +61,15 @@
 
 ## Kiểu dữ liệu(Data type)
 1. Dữ liệu nguyên thủy - Primitive data type
-  - Number
-  - String
-  - Boolean
-  - Undefined
-  - Null
-  - Symbol
+    - Number
+    - String
+    - Boolean
+    - Undefined
+    - Null
+    - Symbol
 2. Dữ liệu phức tạp - Complex data type
-  - Function
-  - Object
+    - Function
+    - Object
 
 - Trong javascript kiểu dữ liểu của biến sẽ được định nghĩa bởi giá trị sau dấu bằng
 
@@ -118,53 +118,48 @@
 - Toán tử số học - Arithmetic
 
     -- Trừ(-)
-        ```
+
         var subtraction = 16 - 10;
-        ```
         
     -- Cộng(+)
-        ```
+
         var addition = 16 + 10;
 
         // Chú ý:
         // Nếu cộng hai biến mà một trong 2 biến là chuỗi thì toán tử sẽ là toán tử nối chuỗi
         var name = Linh;
         var age = 24;
-        console.log(name + age) // Trả về Linh24
-        ```
+        console.log(name + age) // Hiển thị Linh24
         
     -- Nhân(*)
-        ```
+
         var multiplication = 16 * 10;
-        ```
         
     -- Chia(/)
-        ```
+
         var division = 10 / 2;
-        ```
         
     -- Chia lấy phần nguyên(%)
-        ```
+
         var modulus = 10 % 3;
-        ```
+
         
     -- Tăng lên 1(++)
-        ```
+
         var increment = 10;
         increment++;
-        ```
         
     -- Giảm đi 1(--)
-        ```
+
         var decrement = 10;
         decrement--;
-        ```
 
-  - Toán tử gán - Assignment(=)
-    ```
-    var number = 1;
-    number = 2
-    ```
+- Toán tử gán - Assignment(=)
+  
+      ```
+      var number = 1;
+      number = 2
+      ```
 
 - Toán tử so sánh - Comparison
 
@@ -206,6 +201,5 @@
         {
           console.log("Other");
         }
-    ```
     ```
     
