@@ -203,3 +203,112 @@
         }
     ```
     
+## Array(Mảng)
+- Trong javascript mảng có thể lưu giữ nhiều giá trị và không nhất thiết phải cùng kiểu dữ liệu
+    ```
+    var languages = [
+        "JavaScript",
+        "Java",
+        "Python",
+        null,
+        undefined,
+        function(){},
+        {},
+    ];
+
+    // Trong Array thì mọi phần tử đều được đánh chỉ mục và bắt đầu từ 0
+    // Cách truy xuất phần tử của mảng theo index
+    console.log( language[0] );
+
+    // Cú pháp khai báo mảng
+    // Có 2 cách khao báo mảng
+    var number = [1, 3, 4, 12]
+    var string = new Array( "Nguyen", "Duy", "Linh" );
+    ```
+- Các phương thức hay được sử dụng trong Array
+    - pop - xóa đi phần tử ở cuối mảng và trả về phần tử mà nó đã xóa
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        var language = languages.pop();
+
+        // Chú ý: khi sử dụng pop mà mảng không còn phần tử nào thì kết quả trả về sẽ là undefined
+        ```
+    - push - chèn một hoặc nhiều phần tử vào cuối mảng và trả về độ dài mới của mảng
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        var length = languages.push("C#", "C++");
+        ```
+    - shift - xóa đi phần tử ở đầu mảng và trả về phần tử mà nó đã xóa
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        var language = languages.shift();
+        ```
+    - unshift - chèn một hoặc nhiều phần tử vào đầu mảng và trả về độ dài mới của mảng
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        var length = languages.unshift("C#", "C++");
+        ```
+    - splicing - Xóa một hoặc nhiều phần tử bất kỳ và thêm phần tử mới
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        // Các tham số truyền vào
+        // Tham số đầu tiên: Vị trí đặt con trỏ để xóa
+        // Tham số thứ hai: Số phần tử được xóa
+        // Tham số còn lại: Các phần tử được chèn
+        languages.splice(1, 1, "C#", "C++");
+        ```
+    - concat - Gộp array
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        var languages2 = [
+            "C#",
+            "C++",
+        ];
+
+        // Mảng languages sẽ cộng thêm hai phần tử từ mảng languages2
+        languages.concat(languages2);
+        ```
+    - slicing - trả về một bản sao của mảng thành một đối tượng mảng mới, gồm các tham số là vị trí phần tử đầu và cuối của mảng
+        ```
+        var languages = [
+            "JavaScript",
+            "Java",
+            "Python",
+        ];
+
+        console.log( languages.slice(1) )
+        // Kết quả: Array [ "Java", "Python" ]
+
+        console.log( languages.slice(0, 1) )
+        // Kết quả: Array [ "JavaScript", "Java" ]
+        ```
