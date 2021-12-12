@@ -1,29 +1,4 @@
 # Javascript Basic
-
-## Một số hàm built-in(Là những hàm được xây dựng sẵn)
-1. Alert
-    -  Show ra cảnh báo trên trình duyệt
-    - Vd: alert("Hello world!!!")
-2. Console
-    - Là đối tượng gồm các phương thức để giao tiếp với trình console của browser
-    - Vd: console.log("Nguyen Duy Linh")
-3. Confirm
-    - Show ra hộp thoại để xác nhận, với message là giá trị truyền vào
-    - Vd: confirm("Bạn chắc chắn muốn học javascript chứ?")
-4. Prompt
-    - Show ra hộp thoại có thể nhập giá trị trên đó, với message là giá trị truyền vào
-    - Vd: prompt("Nhập số tuổi")
-5. Set timeout
-    - Set thời gian sau bao lâu để xử lý một công việc, với tham số truyền vào là milisecond 
-    - Vd: setTimeout( function () {
-          console.log("Đây là message được show ra sau 1s")
-      }, 1000 )
-6. Set interval
-    - Thực hiện một công việc lặp đi lặp lại sau một khoảng thời gian, với tham số truyền vào là milisecond
-    - Vd: setInterval( function () {
-          console.log("In ra sau 1s" + Math.random())
-      }, 1000 )
-
 ## Variables(Biến)
 - Có 3 cách khai báo biến trong javascript: var, let, const
 - var - cách sử dụng
@@ -188,7 +163,7 @@
   -- Logical NOT(`!`)
 
 ## Condition(Điều kiện)
-- If - dùng để biểu diễn những hành động khác nhau cho những quyết định khác nhau
+- If - dùng để biểu diễn những hành động cho những quyết định khác nhau
     ```
         if (hour > 8.30) {
           console.log("Working");
@@ -312,3 +287,114 @@
         console.log( languages.slice(0, 1) )
         // Kết quả: Array [ "JavaScript", "Java" ]
         ```
+
+## Hàm(Function)
+- Hàm built-in(Là những hàm được xây dựng sẵn)
+    1. Alert
+        - Show ra cảnh báo trên trình duyệt
+        - Vd: alert("Hello world!!!")
+    2. Console
+        - Là đối tượng gồm các phương thức để giao tiếp với trình console của browser
+        - Vd: console.log("Nguyen Duy Linh")
+    3. Confirm
+        - Show ra hộp thoại để xác nhận, với message là giá trị truyền vào
+        - Vd: confirm("Bạn chắc chắn muốn học javascript chứ?")
+    4. Prompt
+        - Show ra hộp thoại có thể nhập giá trị trên đó, với message là giá trị truyền vào
+        - Vd: prompt("Nhập số tuổi")
+    5. Set timeout
+        - Set thời gian sau bao lâu để xử lý một công việc, với tham số truyền vào là milisecond 
+        - Vd: setTimeout( function () {
+            console.log("Đây là message được show ra sau 1s")
+        }, 1000 )
+    6. Set interval
+        - Thực hiện một công việc lặp đi lặp lại sau một khoảng thời gian, với tham số truyền vào là milisecond
+        - Vd: setInterval( function () {
+            console.log("In ra sau 1s" + Math.random())
+        }, 1000 )
+- Hàm tự định nghĩa
+    - Hàm là một khối mã, và chỉ làm một việc cụ thể
+    - Tính chất:
+        - Không thực thi khi định nghĩa
+        - Sẽ thực thi khi được gọi
+        - Có thể nhận nhiều tham số
+        - Có thể trả về 1 giá trị
+        ```
+        function showDialog() {
+            alert("Show cảnh báo");
+        }
+
+        // Cách gọi hàm tự định nghĩa
+        showDialog();
+
+        // Định nghĩa ra hàm có chứa tham số
+        // Hàm dưới đây thì message được gọi là 'tham số truyền vào' (Parameter)
+        function showMessage(message) {
+            console.log(message)
+        }
+
+        // Khi gọi hàm showMessage thì giá trị message truyền vào được gọi là 'đối số' (Argument)
+        showMessage("Test message")
+        ```
+    - Đối với hàm chứa nhiều tham số ta có thể sử dụng đối tượng `arguments` như sau
+        ```
+        function showMessage() {
+            // Đối tượng argument để lấy ra các tham số được truyền vào - có dạng mảng
+            console.log(arguments)
+        }
+
+        showMessage("Test Message", "Show Message", 1, 2);
+        ```
+    - Hàm trả về - Sử dụng từ khóa `return` trong hàm để cho phép trả về giá trị
+        ```
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // Trả về kết quả là 3
+        var result = sum(1, 2);
+
+        function sumString(a, b) {
+            return a.toString() + b.toString();
+        }
+
+        // Trả về kết quả là 12
+        var result = sumString(1, 2)
+        ```
+    - Định nghĩa biến và hàm trong hàm
+        ```
+        function showMessage() {
+            // Phạm vi của biến message chỉ được sử dụng trong khối block
+            var message = getMessage();
+            
+            // Phạm vi của hàm getMessage() chỉ được sử dụng trong khối block
+            function getMessage() {
+                return "Test message";
+            }
+        }
+        ```
+    - Các loại function
+        1. Declaration funtion
+            ```
+            function myFunction() {
+                console.log("Declaration funtion");
+            }
+            ```
+        2. Expression function
+            ```
+            var myFunction = function () {
+                console.log("Expression function");
+            }
+            ```
+        3. Arrow function
+            ```
+            var myFunction = () => {
+                console.log("Arrow function");
+            }
+            ```
+        ---
+        **Chú ý**
+        Sự khác nhau của `Declaration funtion` với hai loại còn lại là chúng ta có thể gọi trước khi nó được định nghĩa. (Tìm hiểu khái niệm `hoisting`)
+
+        ---
+    
